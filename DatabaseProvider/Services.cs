@@ -64,16 +64,16 @@ namespace DogSitter.DatabaseProvider
             int clientid = 0;//Call to stored procedure to get the id of the client with client.FirstName and client.LastName
             return clientid;
         }
-        public static int CreateHiring(int clientid,int sitterid)
+        public static int CreateHiring(ResponseHiring hiring)
         {
-            //Call to s.p. to add a hiring with clientid and sitterid to the hirings table 
+            //Call to s.p. to add a hiring with hiring.ClientId and hiring.SitterId to the hirings table 
             int hireid = 0;//Call to s.p. to get the if od the last added hire in hirings table
             return hireid;
         }
         public static void CreateHiringDetails(ResponseHiring hiring)
         {
             
-            //Call to s.p to create a hiringdetail with given arguments in hiringdetails table
+            //Call to s.p to create a hiringdetail with given arguments(hiring.Id,hiring.ClientId,hiring.SitterId,hiring.NumberOfDogs) in hiringdetails table
         }
         public static void CreateFeedback(ResponseFeedback responsefeedback)
         {

@@ -34,8 +34,10 @@ namespace DogSitter.Controllers
         {
             //Call to GetClientId(hiring.Client)->clientid
             //Call to GetSitterId(hiring.Sitter)->sitterid
-            //Call to CreateHiring(int clientid)->hireid   (of last added hire in hirings able)
-            //Method to store hiringdetails with hireid (from above) clientid sitterid numofdogs
+            //ResponseHiring responsehiring = new ResponseHiring() { ClientId=clientid, SitterId=sitterid, NumberOfDogs=hiring.NumberOfDogs};
+            //Call to CreateHiring(ResponseHiring responsehiring)->hireid   (of last added hire in hirings able)
+            //responsehiring.Id=hireid
+            //Call to CreateHiringDetails(Response hiring) with argument responsehiring the same above
             return StatusCode(StatusCodes.Status200OK);
         }
         [HttpPost]
